@@ -36,6 +36,13 @@ export default class Timer extends Vue {
 
   refreshTimer() {
     let nMilliSeconds = this.targetDate - Date.now()
+    let goesForward = false
+
+    if (nMilliSeconds < 0) {
+      nMilliSeconds = -nMilliSeconds
+      goesForward = true
+    }
+
     let nSeconds = nMilliSeconds % 60000
     nMilliSeconds -= nSeconds
     let nMinutes = nMilliSeconds % 3600000
@@ -49,11 +56,11 @@ export default class Timer extends Vue {
     nSeconds = nSeconds / 1000
     nDays = nDays / 86400000
 
-    if ((nHours === 17) || (nMinutes === 17) || (nDays == 17) || (`${nSeconds}`.split('.')[0] == '17')) {
+    if ((nHours === 17) || (nMinutes === 17) || (nDays == 17)) {
       this.color = '#0392cf'
       this.bgColor = 'white'
     } else {
-      this.color = '#d11141'
+      this.color = goesForward ? '#7bc043' : '#d11141'
       this.bgColor = 'black'
     }
 

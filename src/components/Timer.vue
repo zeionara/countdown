@@ -1,6 +1,6 @@
 <template>
   <div class="timer">
-    <h1 v-bind:style="{color: color}">{{ label }}</h1>
+    <h1 v-bind:style="{color: color}"><span id="rotate-text"><span style="color:#c99789">=</span><span style="color:#96ceb4">>></span><span style="color:#fed766">*</span></span>{{ label }}</h1>
   </div>
 </template>
 
@@ -90,9 +90,16 @@ h1 {
     margin-top: -100px;
     position: absolute;
     text-align: center;
-    top: 50%;
+    top: 45%;
     width: 100%;
     font-size: 150pt;
     font-family: inconsolata, monospace;
+}
+
+#rotate-text {
+   width: 100px;
+   transform: rotate(270deg);
+   display: block;
+   margin: 0 auto;
 }
 </style>

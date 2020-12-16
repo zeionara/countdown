@@ -1,5 +1,5 @@
 <template>
-  <Timer time='16 Dec 2020 23:35:00 GMT+3'/>
+  <Timer time='17 Dec 2020 04:30:00 GMT+5'/>
 </template>
 
 <script lang="ts">

@@ -1,6 +1,4 @@
-# Countdown
-
-A simple tool for visualizing remaining time for an event.
+# countdown
 
 ## Project setup
 ```

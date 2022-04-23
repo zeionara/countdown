@@ -1,3 +1,4 @@
-module.exports = {
-    publicPath: '\\~s207602/countdown'
-}
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true
+})
